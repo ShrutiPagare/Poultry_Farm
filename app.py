@@ -8,11 +8,15 @@ Run:  streamlit run app.py
 import streamlit as st
 import joblib
 
+st.title("Poultry Farm AI App")
+
 @st.cache_resource
 def load_model():
     return joblib.load("model.pkl")
 
 model = load_model()
+
+st.write("App is running successfully ✅")
 
 
 import sys
