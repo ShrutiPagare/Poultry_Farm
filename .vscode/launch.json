@@ -1,0 +1,61 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "🚀 Run Streamlit App",
+      "type": "python",
+      "request": "launch",
+      "module": "streamlit",
+      "args": ["run", "app.py", "--server.port=8501"],
+      "cwd": "${workspaceFolder}",
+      "env": {"PYTHONPATH": "${workspaceFolder}"},
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "🏋️ Train All Models",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/train_all.py",
+      "cwd": "${workspaceFolder}",
+      "env": {"PYTHONPATH": "${workspaceFolder}"},
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "📊 Generate Dataset",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/data/generate_dataset.py",
+      "cwd": "${workspaceFolder}",
+      "env": {"PYTHONPATH": "${workspaceFolder}"},
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "🧪 Run Pytest",
+      "type": "python",
+      "request": "launch",
+      "module": "pytest",
+      "args": ["tests/", "-v", "--tb=short"],
+      "cwd": "${workspaceFolder}",
+      "env": {"PYTHONPATH": "${workspaceFolder}"},
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "💰 Train Profit Model",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/models/profit_prediction.py",
+      "cwd": "${workspaceFolder}",
+      "env": {"PYTHONPATH": "${workspaceFolder}"},
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "⚠️ Train Risk Classifier",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/models/risk_classification.py",
+      "cwd": "${workspaceFolder}",
+      "env": {"PYTHONPATH": "${workspaceFolder}"},
+      "console": "integratedTerminal"
+    }
+  ]
+}
