@@ -6,15 +6,14 @@
 Run:  streamlit run app.py
 """
 import streamlit as st
-import joblib
 
-st.title("Poultry Farm AI App")
+st.set_page_config(
+    page_title="PoultryAI — Farm Intelligence",
+    page_icon="🐔",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
 
-@st.cache_resource
-def load_model():
-    return joblib.load("model.pkl")
-
-model = load_model()
 
 st.write("App is running successfully ✅")
 
@@ -23,22 +22,13 @@ import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 
-import streamlit as st
+
 import pandas as pd
 import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-# ─────────────────────────────────────────────────────────────
-# PAGE CONFIG
-# ─────────────────────────────────────────────────────────────
-st.set_page_config(
-    page_title="PoultryAI — Farm Intelligence",
-    page_icon="🐔",
-    layout="wide",
-    initial_sidebar_state="expanded",
-)
 
 # ─────────────────────────────────────────────────────────────
 # DESIGN SYSTEM
